@@ -1,0 +1,1639 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第十一节：序列化 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="85.md" />
+    
+    
+    <link rel="prev" href="../ch10/84.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../ch0/">
+            
+                <a href="../ch0/">
+            
+                    
+                    准备知识说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch1/">
+            
+                <a href="../ch1/">
+            
+                    
+                    第一节：创建和销毁对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ch1/01.md">
+            
+                <span>
+            
+                    
+                    用静态工厂方法替代构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ch1/02.md">
+            
+                <span>
+            
+                    
+                    遇到多个构造器参数时要考虑使用构建器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ch1/03.md">
+            
+                <span>
+            
+                    
+                    用私有构造器或者枚举类型强化Singleton属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ch1/04.md">
+            
+                <span>
+            
+                    
+                    通过私有构造器强化不可实例化的能力
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ch1/05.md">
+            
+                <span>
+            
+                    
+                    优先考虑依赖注入来饮用资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../ch1/06.md">
+            
+                <span>
+            
+                    
+                    避免创建不必要等对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../ch1/07.md">
+            
+                <span>
+            
+                    
+                    消除过期的对象引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../ch1/08.md">
+            
+                <span>
+            
+                    
+                    避免使用终结方法和清除方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../ch1/09.md">
+            
+                <span>
+            
+                    
+                    try-with-resources优先于try-finally
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ch2/">
+            
+                <a href="../ch2/">
+            
+                    
+                    第二节：对于所有对象都通用的方法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../ch2/10.md">
+            
+                <span>
+            
+                    
+                    覆盖equals时请遵守约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../ch2/11.md">
+            
+                <span>
+            
+                    
+                    覆盖equals时总要覆盖hashCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../ch2/12.md">
+            
+                <span>
+            
+                    
+                    始终要覆盖toString
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../ch2/13.md">
+            
+                <span>
+            
+                    
+                    谨慎覆盖clone
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../ch2/14.md">
+            
+                <span>
+            
+                    
+                    考虑实现Comparable接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../ch3/">
+            
+                <a href="../ch3/">
+            
+                    
+                    第三节：类和接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../ch3/15.md">
+            
+                <span>
+            
+                    
+                    使类和成员的可访问性最小化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../ch3/16.md">
+            
+                <span>
+            
+                    
+                    要在共有类而非公有域中使用访问方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../ch3/17.md">
+            
+                <span>
+            
+                    
+                    使可变性最小化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../ch3/18.md">
+            
+                <span>
+            
+                    
+                    复合优先于继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../ch3/19.md">
+            
+                <span>
+            
+                    
+                    要么设计继承并提供文档说明，要么禁止继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../ch3/20.md">
+            
+                <span>
+            
+                    
+                    接口优于抽象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../ch3/21.md">
+            
+                <span>
+            
+                    
+                    为后代设计接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../ch3/22.md">
+            
+                <span>
+            
+                    
+                    接口只用于定义类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../ch3/23.md">
+            
+                <span>
+            
+                    
+                    类层次优于标签类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../ch3/24.md">
+            
+                <span>
+            
+                    
+                    静态成员类优于非静态成员类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../ch3/25.md">
+            
+                <span>
+            
+                    
+                    限制源文件为单个顶级类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../ch4/">
+            
+                <a href="../ch4/">
+            
+                    
+                    第四节：范型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../ch4/26.md">
+            
+                <span>
+            
+                    
+                    请不要使用原生态类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../ch4/27.md">
+            
+                <span>
+            
+                    
+                    消除非受检的警告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../ch4/28.md">
+            
+                <span>
+            
+                    
+                    列表优于数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../ch4/29.md">
+            
+                <span>
+            
+                    
+                    优先考虑范型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../ch4/30.md">
+            
+                <span>
+            
+                    
+                    优先考虑范型方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../ch4/31.md">
+            
+                <span>
+            
+                    
+                    利用有限制通配符来提升API的灵活性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../ch4/32.md">
+            
+                <span>
+            
+                    
+                    谨慎并用反省和可变参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../ch4/33.md">
+            
+                <span>
+            
+                    
+                    优先考虑类型安全的异构容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../ch5/">
+            
+                <a href="../ch5/">
+            
+                    
+                    第五节：枚举和注解
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../ch5/34.md">
+            
+                <span>
+            
+                    
+                    用enum代替int常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../ch5/35.md">
+            
+                <span>
+            
+                    
+                    用实例域代替序数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../ch5/36.md">
+            
+                <span>
+            
+                    
+                    用EnumSet代替位域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../ch5/37.md">
+            
+                <span>
+            
+                    
+                    用EnumMap代替序数索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../ch5/38.md">
+            
+                <span>
+            
+                    
+                    用接口模拟可扩展的枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../ch5/39.md">
+            
+                <span>
+            
+                    
+                    注解优先于命名模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../ch5/40.md">
+            
+                <span>
+            
+                    
+                    坚持使用Override注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../ch5/41.md">
+            
+                <span>
+            
+                    
+                    用标记接口定义类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../ch6/">
+            
+                <a href="../ch6/">
+            
+                    
+                    第六节：Lambda 和 Stream
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../ch6/42.md">
+            
+                <span>
+            
+                    
+                    Lambda优先于匿名类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../ch6/43.md">
+            
+                <span>
+            
+                    
+                    方法引用优先于Lambda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../ch6/44.md">
+            
+                <span>
+            
+                    
+                    坚持使用标准的函数接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../ch6/45.md">
+            
+                <span>
+            
+                    
+                    谨慎使用Stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../ch6/46.md">
+            
+                <span>
+            
+                    
+                    优先选择Stream中无副作用的函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../ch6/47.md">
+            
+                <span>
+            
+                    
+                    Stream要优先于Collection作为返回类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../ch6/48.md">
+            
+                <span>
+            
+                    
+                    谨慎使用Stream并行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ch7/">
+            
+                <a href="../ch7/">
+            
+                    
+                    第七节：方法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../ch7/49.md">
+            
+                <span>
+            
+                    
+                    检查参数的有效性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../ch7/50.md">
+            
+                <span>
+            
+                    
+                    必要时进行保护性拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../ch7/51.md">
+            
+                <span>
+            
+                    
+                    谨慎设计方法签名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../ch7/52.md">
+            
+                <span>
+            
+                    
+                    慎用重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../ch7/53.md">
+            
+                <span>
+            
+                    
+                    慎用可变参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../ch7/54.md">
+            
+                <span>
+            
+                    
+                    返回零长度的数组或者集合而不是null
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../ch7/55.md">
+            
+                <span>
+            
+                    
+                    谨慎返回optinal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../ch7/56.md">
+            
+                <span>
+            
+                    
+                    为所有导出的API元素编写文档注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ch8/">
+            
+                <a href="../ch8/">
+            
+                    
+                    第八节：通用编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../ch8/57.md">
+            
+                <span>
+            
+                    
+                    将局部变量的作用域最小化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../ch8/58.md">
+            
+                <span>
+            
+                    
+                    for-each循环优先于传统的for循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../ch8/59.md">
+            
+                <span>
+            
+                    
+                    了解和使用类库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../ch8/60.md">
+            
+                <span>
+            
+                    
+                    如果需要精确的答案，请避免使用float和double
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../ch8/61.md">
+            
+                <span>
+            
+                    
+                    基本类型优先于封装基本类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../ch8/62.md">
+            
+                <span>
+            
+                    
+                    如果其他类型更适合，则尽量避免使用字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../ch8/63.md">
+            
+                <span>
+            
+                    
+                    了解字符串连接性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../ch8/64.md">
+            
+                <span>
+            
+                    
+                    通过接口引用对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../ch8/65.md">
+            
+                <span>
+            
+                    
+                    接口优先于反射机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../ch8/66.md">
+            
+                <span>
+            
+                    
+                    谨慎地使用本地方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../ch8/67.md">
+            
+                <span>
+            
+                    
+                    谨慎地进行优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../ch8/68.md">
+            
+                <span>
+            
+                    
+                    遵守普遍接受的命名惯例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../ch9/">
+            
+                <a href="../ch9/">
+            
+                    
+                    第九节：异常
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../ch9/69.md">
+            
+                <span>
+            
+                    
+                    只针对异常的情况才使用异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../ch9/70.md">
+            
+                <span>
+            
+                    
+                    对可恢复的情况使用受检异常，对编程错误使用运行时异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../ch9/71.md">
+            
+                <span>
+            
+                    
+                    避免不必要地使用受检异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../ch9/72.md">
+            
+                <span>
+            
+                    
+                    优先使用标准的异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../ch9/73.md">
+            
+                <span>
+            
+                    
+                    抛出与抽象对应的异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../ch9/74.md">
+            
+                <span>
+            
+                    
+                    每个方法抛出的所有异常都要建立文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../ch9/75.md">
+            
+                <span>
+            
+                    
+                    在细节消息中包含失败--捕获信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../ch9/76.md">
+            
+                <span>
+            
+                    
+                    努力使失败保持原子性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../ch9/77.md">
+            
+                <span>
+            
+                    
+                    不要忽略异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../ch10/">
+            
+                <a href="../ch10/">
+            
+                    
+                    第十节: 并发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../ch10/78.md">
+            
+                <span>
+            
+                    
+                    同步访问共享的可变数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../ch10/79.md">
+            
+                <span>
+            
+                    
+                    避免过度同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../ch10/80.md">
+            
+                <span>
+            
+                    
+                    executor、task和stram优先于线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../ch10/81.md">
+            
+                <span>
+            
+                    
+                    并发工具优先于wait和notify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../ch10/82.md">
+            
+                <span>
+            
+                    
+                    线程安全性的文档化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../ch10/83.md">
+            
+                <span>
+            
+                    
+                    慎用延迟初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../ch10/84.md">
+            
+                <span>
+            
+                    
+                    不要依赖于线程调度器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第十一节：序列化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="85.md">
+            
+                <span>
+            
+                    
+                    其他方法优先于Java序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="86.md">
+            
+                <span>
+            
+                    
+                    谨慎地实现Serializable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="87.md">
+            
+                <span>
+            
+                    
+                    考虑使用自定义的序列化形式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="88.md">
+            
+                <span>
+            
+                    
+                    保护性地编写readObject方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="89.md">
+            
+                <span>
+            
+                    
+                    对于实例控制，枚举类型优先于readResolve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="90.md">
+            
+                <span>
+            
+                    
+                    考虑用序列化代理代替序列化实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ch12/">
+            
+                <a href="../ch12/">
+            
+                    
+                    读后感
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第十一节：序列化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id=""> </h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ch10/84.md" class="navigation navigation-prev " aria-label="Previous page: 不要依赖于线程调度器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="85.md" class="navigation navigation-next " aria-label="Next page: 其他方法优先于Java序列化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第十一节：序列化","level":"1.13","depth":1,"next":{"title":"其他方法优先于Java序列化","level":"1.13.1","depth":2,"path":"ch11/85.md","ref":"ch11/85.md","articles":[]},"previous":{"title":"不要依赖于线程调度器","level":"1.12.7","depth":2,"path":"ch10/84.md","ref":"ch10/84.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch11/README.md","mtime":"2019-11-06T10:05:13.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-06T09:53:25.698Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
